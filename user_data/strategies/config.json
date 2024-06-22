@@ -1,0 +1,146 @@
+{
+    "leverage":5,
+    "bot_name": "eagle_eye",
+    "dry_run": false,
+    "timeframe": "5m",
+    "max_open_trades": 3,
+    "available_capital": 10,
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.9,
+    "dry_run_wallet": 100,
+    "recursive_strategy_search": true,
+    "disable_dataframe_checks": false,
+    "can_short": true,
+    "reduce_df_footprint": false,
+    "cancel_open_orders_on_exit": true,
+    "use_exit_signal": true,
+    "process_only_new_candles": false,
+    "position_adjustment_enable": false,
+    "force_entry_enable": true,
+    "amend_last_stake_amount": true,
+    "fee": 0.0015,
+    "futures_funding_rate": 0.001,
+    "exit_profit_only": false,
+    "ignore_buying_expired_candle_after": 300,
+    "db_url": "sqlite:///user_data/freqtrade.sqlite",
+    "fiat_display_currency": "USD",
+    "stake_currency": "USDT",
+    "initial_state": "running",
+    "dataformat_ohlcv": "json",
+    "dataformat_trades": "json",
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": true,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0
+    },
+    "unfilledtimeout": {
+        "entry": 15,
+        "exit": 15,
+        "exit_timeout_count": 3,
+        "unit": "minutes"
+    },
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "market",
+        "force_exit": "market",
+        "force_entry": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false,
+        "stoploss_price_type": "last",
+        "stoploss_on_exchange_interval": 60,
+        "stoploss_on_exchange_limit_ratio": 0.99
+    },
+    "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+    },
+    "exchange": {
+        "name": "bybit",
+        "key": "C7D71AD39C9248099CA9CB2FFF185EF1",
+        "secret": "F9AAF607A05B454A6D1B1F42B53972F516931C5C5EB6ADC0",
+        "markets_refresh_interval": 30,
+        "log_responses": false,
+        "unknown_fee_rate": 0.001,
+        "pair_whitelist": [
+            "KAVA/USDT:USDT"
+        ]
+    },
+    "pairlists": [
+        {"method": "StaticPairList"}
+    ],
+    "edge": {
+        "enabled": false,
+        "process_throttle_secs": 3600,
+        "calculate_since_number_of_days": 7,
+        "allowed_risk": 0.01,
+        "stoploss_range_min": -0.01,
+        "stoploss_range_max": -0.1,
+        "stoploss_range_step": -0.01,
+        "minimum_winrate": 0.6,
+        "minimum_expectancy": 0.2,
+        "min_trade_number": 10,
+        "max_trade_duration_minute": 1440,
+        "remove_pumps": false
+    },
+    "telegram": {
+        "enabled": false,
+        "token": "6976841673:AAFQN0aSl7iUd26oOytXh0WsKydBU20M2WM",
+        "chat_id": "5514429070",
+        "allow_custom_messages": true,
+        "notification_settings": {
+            "status": "on",
+            "warning": "on",
+            "startup": "on",
+            "entry": "on",
+            "entry_fill": "on",
+            "exit": {
+                "roi": "on",
+                "emergency_exit": "on",
+                "force_exit": "on",
+                "exit_signal": "on",
+                "trailing_stop_loss": "on",
+                "stop_loss": "on",
+                "stoploss_on_exchange": "on",
+                "custom_exit": "on"
+            },
+            "exit_fill": "on",
+            "entry_cancel": "on",
+            "exit_cancel": "on",
+            "protection_trigger": "off",
+            "protection_trigger_global": "on",
+            "show_candle": "off"
+        },
+        "reload": true
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "127.0.0.1",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": true,
+        "jwt_secret_key": "95ee043b07757de739cacb5efffd52089f9a5959f1375b2375128263b6f76432",
+        "ws_token": "6PY_SjxK-LK-NP1bkg3IYIxA7dnrkBOnlA",
+        "CORS_origins": [],
+        "username": "mupol313",
+        "password": "Yamaha.123"
+    },
+    "internals": {
+        "process_throttle_secs": 5,
+        "heartbeat_interval": 10,
+        "sd_notify": true
+    }
+}

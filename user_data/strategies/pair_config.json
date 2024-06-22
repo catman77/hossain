@@ -1,0 +1,100 @@
+{
+    "bot_name": "eagle_eye",
+    "dry_run": true,
+    "timeframe": "5m",
+    "max_open_trades": 3,
+    "available_capital": 10,
+    "stake_amount": 0.2,
+    "tradable_balance_ratio": 0.9,
+    "dry_run_wallet": 100,
+    "recursive_strategy_search": true,
+    "disable_dataframe_checks": false,
+    "can_short": true,
+    "reduce_df_footprint": false,
+    "cancel_open_orders_on_exit": true,
+    "use_exit_signal": true,
+    "process_only_new_candles": false,
+    "position_adjustment_enable": false,
+    "force_entry_enable": true,
+    "amend_last_stake_amount": true,
+    "fee": 0.0015,
+    "futures_funding_rate": 0.001,
+    "exit_profit_only": false,
+    "ignore_buying_expired_candle_after": 300,
+    "db_url": "sqlite:///user_data/freqtrade.sqlite",
+    "fiat_display_currency": "USD",
+    "stake_currency": "USDT",
+    "initial_state": "running",
+    "dataformat_ohlcv": "json",
+    "dataformat_trades": "json",
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": false,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": false,
+        "order_book_top": 1,
+        "price_last_balance": 0.0
+    },
+    "unfilledtimeout": {
+        "entry": 15,
+        "exit": 15,
+        "exit_timeout_count": 3,
+        "unit": "minutes"
+    },
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "market",
+        "force_exit": "market",
+        "force_entry": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false,
+        "stoploss_price_type": "last",
+        "stoploss_on_exchange_interval": 60,
+        "stoploss_on_exchange_limit_ratio": 0.99
+    },
+    "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+    },
+    "pairlists": [
+        {
+            "method": "VolumePairList",
+            "number_assets": 20,
+            "sort_key": "quoteVolume",
+            "lookback_days": 10,
+            "refresh_period": 1800
+        },
+        {
+            "method": "MarketCapPairList",
+            "number_assets": 20,
+            "max_rank": 50,
+            "refresh_period": 1800
+        },
+        {
+            "method": "PriceFilter",
+            "low_price_ratio": 0.1,
+            "min_price": 0.0001,
+            "max_price": 1.5
+        }
+    ],
+    "exchange": {
+        "name": "coinex",
+        "key": "C7D71AD39C9248099CA9CB2FFF185EF1",
+        "secret": "F9AAF607A05B454A6D1B1F42B53972F516931C5C5EB6ADC0",
+        "markets_refresh_interval": 30,
+        "log_responses": false,
+        "unknown_fee_rate": 0.001,
+        "pair_whitelist": []
+    }
+}

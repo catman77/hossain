@@ -1,0 +1,40 @@
+{
+  "strategy_name": "fast",
+  "params": {
+    "buy": {
+      "base_nb_candles_buy": 10,
+      "ewo_high": 3.552,
+      "ewo_high_2": 6.509,
+      "ewo_low": -12.075,
+      "low_offset": 0.937,
+      "low_offset_2": 0.912,
+      "rsi_buy": 33
+    },
+    "sell": {
+      "base_nb_candles_sell": 49,
+      "high_offset": 1.008,
+      "high_offset_2": 1.033
+    },
+    "protection": {},
+    "roi": {
+      "0": 0.249,
+      "21": 0.060000000000000005,
+      "71": 0.035,
+      "188": 0
+    },
+    "stoploss": {
+      "stoploss": -0.313
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.162,
+      "trailing_stop_positive_offset": 0.167,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 4
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2024-06-20 15:02:08.889369+00:00"
+}
